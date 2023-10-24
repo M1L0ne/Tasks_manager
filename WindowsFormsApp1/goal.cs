@@ -20,23 +20,63 @@ namespace WindowsFormsApp1
 
         private void goal_Load(object sender, EventArgs e)
         {
+            textBox4.Hide();
+            DB db = new DB();
+            db.openConnection();
+
+            string sql = "SELECT id, g_name, g_cost, g_date from goal";
+
+            MySqlCommand command = new MySqlCommand(sql, db.getConnection());
+            MySqlDataReader reader = command.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+                dataGridView1.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+            }
+
+            reader.Close();
+            db.closeConnection();
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dataGridView1.Hide();
+            button2.Hide();
+            textBox4.Show();
+            int row = e.RowIndex + 1;
+            int goalCost = 0;
+            int finalsumm = 0;
+            string goalDateEnd = "";
             button1.Enabled = false;
             button1.Visible = false;
             DB db = new DB();
             db.openConnection();
 
-            string sql = "SELECT g_name,g_cost,g_date from goal";
+            string sql = "SELECT COUNT(*) FROM `goal`";
 
             MySqlCommand command = new MySqlCommand(sql, db.getConnection());
             MySqlDataReader reader = command.ExecuteReader();
+
+            reader.Read();
+            int goalsCount = reader.GetInt32(0);
+
+            reader.Close();
+
+            sql = "SELECT g_name,g_cost,g_date from goal where id = " + row;
+
+            command = new MySqlCommand(sql, db.getConnection());
+            reader = command.ExecuteReader();
 
             try
             {
                 if (reader.Read())
                 {
                     textBox1.Text = reader.GetString(0);
-                    textBox2.Text = reader.GetInt64(1).ToString();
-                    textBox3.Text = reader.GetDateTime(2).ToString();
+                    goalCost = reader.GetInt32(1);
+                    textBox2.Text = goalCost.ToString();
+                    goalDateEnd = reader.GetDateTime(2).ToString();
+                    textBox3.Text = goalDateEnd;
 
                 }
                 else
@@ -49,8 +89,7 @@ namespace WindowsFormsApp1
                     else
                     {
                         label4.Hide();
-                        label5.Hide();
-                        label7.Hide();
+                        textBox4.Hide();
                         button1.Enabled = true;
                         button1.Visible = true;
                     }
@@ -59,9 +98,47 @@ namespace WindowsFormsApp1
             }
             finally
             {
-                // Always call Close when done reading.
                 reader.Close();
             }
+
+            sql = "SELECT type, name, cost, f_dateend from finances";
+
+            command = new MySqlCommand(sql, db.getConnection());
+            reader = command.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+                if (reader.GetString(0) == "+")
+                {
+                    finalsumm = finalsumm + reader.GetInt32(2);
+                }
+                else
+                {
+                    finalsumm = finalsumm - reader.GetInt32(2);
+                }
+            }
+
+
+            int mounthToEndGoal = goalCost / finalsumm;
+            int goalCostEachMonth = finalsumm / mounthToEndGoal;
+            int yearsToEndGoal = mounthToEndGoal / 12;
+            mounthToEndGoal = mounthToEndGoal % 12;
+
+            textBox4.Text = "За месяц накоплено: " + finalsumm / goalsCount + "/" + goalCostEachMonth;
+            if (goalCostEachMonth < finalsumm / goalsCount)
+            {
+                textBox4.Text = textBox4.Text + ". Выше плана!";
+            }
+            else
+            {
+                textBox4.Text = textBox4.Text + ". Надо стараться лучше!";
+            }
+
+            textBox4.Text = textBox4.Text + Environment.NewLine + Environment.NewLine + "С таким же сальдо через " + yearsToEndGoal + " лет и " + mounthToEndGoal + " месяца вы сможете осуществить свою мечту!";
+
+
+            reader.Close();
             db.closeConnection();
         }
 
@@ -71,7 +148,7 @@ namespace WindowsFormsApp1
             db.openConnection();
             MySqlCommand command;
 
-            string sql = "INSERT INTO goal VALUES (id, 0, @g_name,@g_cost,@g_date)";
+            string sql = "INSERT INTO goal VALUES (id, @g_name,@g_cost,@g_date)";
 
             command = new MySqlCommand(sql, db.getConnection());
 
@@ -89,6 +166,19 @@ namespace WindowsFormsApp1
             db.closeConnection();
 
             this.Close();
+            goal goal = new goal();
+            goal.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            label4.Hide();
+            textBox4.Hide();
+            button1.Enabled = true;
+            button1.Visible = true;
+            dataGridView1.Hide();
+            button2.Enabled = false;
+            button2.Visible = false;
         }
     }
 }

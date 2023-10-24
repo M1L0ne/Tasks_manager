@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
             DB db = new DB();
             db.openConnection();
 
-            string sql = "INSERT INTO finances VALUES (id, @name, @cost, @type, @f_dateend)";
+            string sql = "INSERT INTO finances VALUES (id, @name, @cost, @type, @f_dateend, @period)";
 
             MySqlCommand command = new MySqlCommand(sql, db.getConnection());
 
@@ -84,6 +84,7 @@ namespace WindowsFormsApp1
             command.Parameters.Add("@cost", MySqlDbType.Int64).Value = textBox2.Text;
             command.Parameters.Add("@type", MySqlDbType.VarChar).Value = textBox3.Text;
             command.Parameters.Add("@f_dateend", MySqlDbType.Date).Value = textBox4.Text;
+            command.Parameters.Add("@period", MySqlDbType.Int16).Value = 1;
 
             MySqlDataReader reader = command.ExecuteReader();
 
@@ -101,13 +102,14 @@ namespace WindowsFormsApp1
             DB db = new DB();
             db.openConnection();
 
-            string sql = "INSERT INTO finances VALUES (id, @name, @cost, @type, @f_dateend)";
+            string sql = "INSERT INTO finances VALUES (id, @name, @cost, @type, @f_dateend, @period)";
 
             MySqlCommand command = new MySqlCommand(sql, db.getConnection());
 
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = textBox1.Text;
             command.Parameters.Add("@cost", MySqlDbType.Int64).Value = textBox2.Text;
             command.Parameters.Add("@type", MySqlDbType.VarChar).Value = textBox3.Text;
+            command.Parameters.Add("@period", MySqlDbType.Int16).Value = 0;
 
             int currentyear = DateTime.Now.Year;
             int currentmonth = DateTime.Now.Month;
