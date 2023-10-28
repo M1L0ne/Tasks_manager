@@ -33,6 +33,7 @@
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,8 +47,9 @@
             this.datetime});
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(16, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1035, 524);
             this.dataGridView1.TabIndex = 0;
@@ -90,6 +92,20 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(50, 50);
             this.panel7.TabIndex = 21;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
+            this.panel7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseClick);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Location = new System.Drawing.Point(16, 566);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(71, 26);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Справка";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ShowNotes
             // 
@@ -97,12 +113,13 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.main1000_mountains_5120x2880_ephby;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 604);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.dataGridView1);
             this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.Font = new System.Drawing.Font("Candara Light", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ShowNotes";
             this.Text = "СПИСОК ЗАМЕТОК";
             this.Load += new System.EventHandler(this.ShowNotes_Load);
@@ -118,5 +135,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn datetime;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button2;
     }
 }

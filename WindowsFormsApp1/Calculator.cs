@@ -108,5 +108,23 @@ namespace WindowsFormsApp1
         {
             textBox1.Text = textBox1.Text + ",";
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            hint hint = new hint();
+            hint.Show();
+        }
     }
 }

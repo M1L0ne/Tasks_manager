@@ -126,5 +126,18 @@ namespace WindowsFormsApp1
             finances fin = new finances();
             fin.Show();
         }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            hint hint = new hint();
+            hint.Show();
+        }
     }
 }

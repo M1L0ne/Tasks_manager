@@ -138,6 +138,12 @@
     <Compile Include="goal.Designer.cs">
       <DependentUpon>goal.cs</DependentUpon>
     </Compile>
+    <Compile Include="hint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hint.Designer.cs">
+      <DependentUpon>hint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="goal.resx">
       <DependentUpon>goal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hint.resx">
+      <DependentUpon>hint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

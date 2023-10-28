@@ -44,6 +44,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             this.label1.Location = new System.Drawing.Point(171, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 29);
+            this.label1.Size = new System.Drawing.Size(93, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Моя цель";
             // 
@@ -63,7 +64,7 @@
             this.textBox1.Location = new System.Drawing.Point(141, 77);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(313, 28);
+            this.textBox1.Size = new System.Drawing.Size(313, 24);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
@@ -71,7 +72,7 @@
             this.textBox2.Location = new System.Drawing.Point(143, 150);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(311, 28);
+            this.textBox2.Size = new System.Drawing.Size(311, 24);
             this.textBox2.TabIndex = 3;
             // 
             // label2
@@ -81,7 +82,7 @@
             this.label2.Location = new System.Drawing.Point(18, 83);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Название";
             // 
@@ -92,7 +93,7 @@
             this.label3.Location = new System.Drawing.Point(18, 155);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 17);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Стоимость";
             // 
@@ -103,7 +104,7 @@
             this.label4.Location = new System.Drawing.Point(170, 278);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 33);
+            this.label4.Size = new System.Drawing.Size(99, 26);
             this.label4.TabIndex = 6;
             this.label4.Text = "Прогресс";
             // 
@@ -114,7 +115,7 @@
             this.label6.Location = new System.Drawing.Point(18, 219);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 17);
+            this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "Дедлайн";
             // 
@@ -123,7 +124,7 @@
             this.textBox3.Location = new System.Drawing.Point(143, 215);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(311, 28);
+            this.textBox3.Size = new System.Drawing.Size(311, 24);
             this.textBox3.TabIndex = 8;
             // 
             // button1
@@ -219,15 +220,29 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(50, 50);
             this.panel7.TabIndex = 21;
+            this.panel7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseClick);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Location = new System.Drawing.Point(18, 518);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(71, 26);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Справка";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // goal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.main1000_mountains_5120x2880_ephby;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(477, 526);
+            this.ClientSize = new System.Drawing.Size(477, 556);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
@@ -271,5 +286,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button3;
     }
 }

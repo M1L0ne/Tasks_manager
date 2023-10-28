@@ -180,5 +180,18 @@ namespace WindowsFormsApp1
             button2.Enabled = false;
             button2.Visible = false;
         }
+
+        private void panel7_MouseClick(object sender, MouseEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            hint hint = new hint();
+            hint.Show();
+        }
     }
 }

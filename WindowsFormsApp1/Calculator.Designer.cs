@@ -48,6 +48,7 @@
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button19 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -379,6 +380,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(50, 50);
             this.panel1.TabIndex = 19;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.Color.White;
+            this.button19.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button19.Location = new System.Drawing.Point(13, 404);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(71, 26);
+            this.button19.TabIndex = 23;
+            this.button19.Text = "Справка";
+            this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // Calculator
             // 
@@ -387,6 +402,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.main1000_mountains_5120x2880_ephby;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(250, 442);
+            this.Controls.Add(this.button19);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
@@ -438,5 +454,6 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button19;
     }
 }

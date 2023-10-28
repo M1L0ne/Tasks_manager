@@ -46,6 +46,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,11 +61,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Candara Light", 10.2F);
             this.button1.Location = new System.Drawing.Point(64, 324);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(209, 34);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Кнопка для периода";
+            this.button1.Text = "Добавить период";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -72,27 +73,27 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Candara Light", 10.2F);
             this.textBox1.Location = new System.Drawing.Point(141, 100);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 28);
+            this.textBox1.Size = new System.Drawing.Size(132, 24);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Candara Light", 10.2F);
             this.textBox2.Location = new System.Drawing.Point(141, 132);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 28);
+            this.textBox2.Size = new System.Drawing.Size(132, 24);
             this.textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Candara Light", 10.2F);
             this.textBox3.Location = new System.Drawing.Point(141, 164);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 28);
+            this.textBox3.Size = new System.Drawing.Size(132, 24);
             this.textBox3.TabIndex = 3;
             // 
             // dataGridView1
@@ -107,9 +108,10 @@
             this.Column2,
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(330, 39);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(476, 427);
             this.dataGridView1.TabIndex = 5;
@@ -143,7 +145,7 @@
             this.label1.Location = new System.Drawing.Point(50, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 28);
+            this.label1.Size = new System.Drawing.Size(196, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "Добавление операции";
             // 
@@ -155,7 +157,7 @@
             this.label2.Location = new System.Drawing.Point(60, 100);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 21);
+            this.label2.Size = new System.Drawing.Size(65, 17);
             this.label2.TabIndex = 7;
             this.label2.Text = "Название";
             // 
@@ -167,7 +169,7 @@
             this.label3.Location = new System.Drawing.Point(60, 132);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 21);
+            this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Сумма";
             // 
@@ -179,7 +181,7 @@
             this.label4.Location = new System.Drawing.Point(60, 164);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 21);
+            this.label4.Size = new System.Drawing.Size(59, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Вид (+/-)";
             // 
@@ -191,7 +193,7 @@
             this.label5.Location = new System.Drawing.Point(60, 274);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 21);
+            this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Дедлайн";
             // 
@@ -204,7 +206,7 @@
             this.label7.Location = new System.Drawing.Point(327, 470);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 21);
+            this.label7.Size = new System.Drawing.Size(95, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Итог за месяц:";
             // 
@@ -217,7 +219,7 @@
             this.label8.Location = new System.Drawing.Point(460, 470);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 21);
+            this.label8.Size = new System.Drawing.Size(44, 17);
             this.label8.TabIndex = 13;
             this.label8.Text = "label8";
             // 
@@ -232,11 +234,11 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Candara Light", 10.2F);
             this.button2.Location = new System.Drawing.Point(64, 217);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(209, 34);
             this.button2.TabIndex = 14;
-            this.button2.Text = "Добавить";
+            this.button2.Text = "Добавить разовый";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -246,7 +248,7 @@
             this.maskedTextBox1.Location = new System.Drawing.Point(141, 274);
             this.maskedTextBox1.Mask = "0000-00-00";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(132, 28);
+            this.maskedTextBox1.Size = new System.Drawing.Size(132, 24);
             this.maskedTextBox1.TabIndex = 15;
             this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
             // 
@@ -260,6 +262,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(50, 50);
             this.panel1.TabIndex = 20;
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button3.Location = new System.Drawing.Point(12, 516);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(71, 26);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Справка";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // finances
             // 
@@ -267,6 +282,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.main1000_mountains_5120x2880_ephby;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(820, 554);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button2);
@@ -284,7 +300,7 @@
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Candara Light", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "finances";
             this.Text = "ФИНАНСЫ";
             this.Load += new System.EventHandler(this.finances_Load);
@@ -314,5 +330,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button3;
     }
 }

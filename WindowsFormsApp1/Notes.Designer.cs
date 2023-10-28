@@ -35,6 +35,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -44,7 +46,7 @@
             this.textBox1.Location = new System.Drawing.Point(16, 15);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(361, 32);
+            this.textBox1.Size = new System.Drawing.Size(361, 27);
             this.textBox1.TabIndex = 0;
             // 
             // label1
@@ -55,7 +57,7 @@
             this.label1.Location = new System.Drawing.Point(409, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 28);
+            this.label1.Size = new System.Drawing.Size(55, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 
@@ -131,6 +133,31 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(50, 50);
             this.panel7.TabIndex = 21;
+            this.panel7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseClick);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.IndianRed;
+            this.panel1.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.trash_xmark_10741813;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel1.Location = new System.Drawing.Point(471, 268);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(50, 50);
+            this.panel1.TabIndex = 22;
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button4.Location = new System.Drawing.Point(414, 234);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(71, 26);
+            this.button4.TabIndex = 23;
+            this.button4.Text = "Справка";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Notes
             // 
@@ -139,6 +166,8 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.main1000_mountains_5120x2880_ephby;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(643, 330);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button3);
@@ -166,5 +195,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button4;
     }
 }
