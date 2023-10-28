@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = textBox1.Text;
             command.Parameters.Add("@cost", MySqlDbType.Int64).Value = textBox2.Text;
             command.Parameters.Add("@type", MySqlDbType.VarChar).Value = textBox3.Text;
-            command.Parameters.Add("@f_dateend", MySqlDbType.Date).Value = textBox4.Text;
+            command.Parameters.Add("@f_dateend", MySqlDbType.Date).Value = maskedTextBox1.Text;
             command.Parameters.Add("@period", MySqlDbType.Int16).Value = 1;
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -125,6 +125,19 @@ namespace WindowsFormsApp1
             this.Close();
             finances fin = new finances();
             fin.Show();
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            hint hint = new hint();
+            hint.Show();
         }
     }
 }

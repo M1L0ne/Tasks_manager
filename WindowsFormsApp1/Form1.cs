@@ -18,7 +18,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
             Menu menu = new Menu();
             menu.Show();
-
         }
 
 
@@ -34,19 +33,24 @@ namespace WindowsFormsApp1
             MySqlDataReader reader = command.ExecuteReader();
 
             string loginGet, passwordGet;
-            string loginWrite = textBox1.Text;
-            string passwordWrite = textBox2.Text;
+            string loginWrite = textBox2.Text;
+            string passwordWrite = textBox1.Text;
 
             while (reader.Read())
             {
                 loginGet = reader[0].ToString();
                 passwordGet = reader[1].ToString();
 
+
                 if (loginGet == loginWrite && passwordGet == passwordWrite)
                 {
                     Menu menu = new Menu();
                     menu.Show();
                     this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Неправильный логин или пароль", "Ошибка");
                 }
             }
 
@@ -63,5 +67,13 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            hint hint = new hint();
+            hint.Show();
+        }
+
+
     }
 }

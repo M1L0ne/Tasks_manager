@@ -48,12 +48,30 @@ namespace WindowsFormsApp1
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
 
-            int row = e.RowIndex + 1;
+            int row = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
 
             Notes notes = new Notes(row);
             notes.Show();
             this.Close();
             /*Notes.Notes_Load(sender, row);*/
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_MouseClick(object sender, MouseEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            hint hint = new hint();
+            hint.Show();
         }
     }
 }

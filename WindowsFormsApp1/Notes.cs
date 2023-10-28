@@ -120,6 +120,49 @@ namespace WindowsFormsApp1
 
             db.closeConnection();
         }
+
+        private void panel7_MouseClick(object sender, MouseEventArgs e)
+        {
+            ShowNotes sn = new ShowNotes();
+            sn.Show();
+            this.Close();
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            var result = MessageBox.Show("Вы уверены, что хотите удалить эту заметку?", "Удаление", MessageBoxButtons.YesNo);
+
+
+
+            if(result == DialogResult.Yes)
+            {
+                DB db = new DB();
+                db.openConnection();
+
+                string sql = "DELETE FROM notes where id = " + idCheck;
+
+                MySqlCommand command = new MySqlCommand(sql, db.getConnection());
+                MySqlDataReader reader = command.ExecuteReader();
+
+                reader.Close();
+                db.closeConnection();
+
+                MessageBox.Show("Удалено!");
+                ShowNotes sn = new ShowNotes();
+                sn.Show();
+                this.Close();
+            }
+            else if (result == DialogResult.No)
+            {
+                
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            hint hint = new hint();
+            hint.Show();
+        }
     }
     
 }
