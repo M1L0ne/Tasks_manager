@@ -190,6 +190,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ShowNotes.resx">
       <DependentUpon>ShowNotes.cs</DependentUpon>
@@ -207,6 +208,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20231016_140555.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bc90db1c5b4febcb2a8cf7bc5cb64f75.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main1000_mountains_5120x2880_ephby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-lock-1890434.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-avatar-126486.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-xmark_10741813.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-slash_10741806.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-right_10741517.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\post-it.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounts %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\income.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
